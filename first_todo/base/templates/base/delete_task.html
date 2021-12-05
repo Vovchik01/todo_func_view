@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vovchik's TODO</title>
+</head>
+<body>
+  <p>
+    Are you sure you want to delete "{{ task }}?"
+  </p>
+  <form method="POST" action="">
+      {% csrf_token %}
+    <input type="submit" value="Delete">
+  </form>
+
+  <a href="{% url 'index' %}">Cancel</a>
+
+</body>
+</html>
